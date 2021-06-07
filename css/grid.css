@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    max-width: 100%;
+    grid-template-rows: 1fr 90px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content"
+                            "footer"
+}
+.main{
+    background-color: aqua;
+    grid-area: content;
+
+}
+.footer{
+    background-color: blueviolet;
+    grid-area: footer;
+
+}
+.aside{
+    background-color: cornsilk;
+    grid-area: sidebar;
+}
+
+@media only screen and (min-width:600px){
+body{
+    grid-template-columns: 40px 1fr;
+    grid-template-areas: "sidebar content"
+                            "footer footer";
+
+
+}
+}
